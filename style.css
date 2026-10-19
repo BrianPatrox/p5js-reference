@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    background-color: rgb(219, 219, 47);
+    height: 300px;
+    border: 1px solid;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.reference {
+    font-family: sans-serif;
+    font-weight: 540;
+    position: static;
+}
+
+.descrition {
+    font-family: sans-serif;
+    font-weight: 500;  
+    margin-top: 500px;  
+}
+
+.site-descrition {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
