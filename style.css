@@ -21,7 +21,6 @@
 .descrition {
     font-family: sans-serif;
     font-weight: 500;  
-    margin-top: 500px;  
 }
 
 .site-descrition {
@@ -30,4 +29,30 @@
     row-gap: 25px;
     margin-top: 50px;
     margin-left: 50px;
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.p {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.what-do {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-weight: 400;
 }
