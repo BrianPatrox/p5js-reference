@@ -3,11 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reference</title>
+    <title>line</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./mats/ico.webp">
+    <link rel="icon" href="../../../mats/ico.png">
 </head>
 <body>
-    
+    <h1 class="title">line()</h1>
+    <div class="description">
+        <p class="Descrition">Draws a straight line between two points.</p>
+        <p class="Descrition">A line's default width is one pixel. The version of <code class="p-with-background Descrition">line()</code> with four parameters draws</br>the line in 2D. To color a line, use the stroke() function. To change its width, use the</br>strokeWeight() function. A line can't be filled, so the fill() function won't affect the line's</br>color.</p>
+        <p class="Descrition">The version of <code class="p-with-background">line()</code> with six parameters allows the line to be drawn in 3D space.</br>Doing so requires adding the <code class="p-with-background">WEBGL</code> argument to createCanvas().</p>
+    <div class="examples">
+        <h2 class="title">Examples</h2>
+        <div class="how">
+            <img class="result" src="./1.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤline(30, 20, 85, 75);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe(</br>ㅤㅤㅤㅤ'A black line on a gray canvas running from top-center to</br>bottom-right.'</br>ㅤㅤ);</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./2.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Style the line.</br>ㅤㅤstroke('magenta');</br>ㅤㅤstrokeWeight(5);</p>
+                <p></p>
+                <p class="Code">ㅤㅤline(30, 20, 85, 75);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe(</br>ㅤㅤㅤㅤ'A thick, magenta line on a gray canvas running from top-</br>ㅤcenter to bottom-right.'</br>ㅤ);</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./3.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Top.</br>ㅤㅤline(30, 20, 85, 20);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Right.</br>ㅤㅤstroke(126);</br>ㅤㅤline(85, 20, 85, 75);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Bottom.</br>ㅤㅤstroke(255);</br>line(85, 75, 30, 75);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe(</br>ㅤㅤㅤㅤ'Three lines drawn in grayscale on a gray canvas. They </br>white circle at the bottom-right.'</br>form the top, right, and bottom sides of a square.'</br>ㅤ);</br>}</p>
+            </div>
+        </div> 
+        <div class="how">
+            <img class="result" src="./4.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100, WEBGL);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤline(-20, -30, 35, 25);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe(</br>ㅤㅤㅤㅤ'A black line on a gray canvas running from top-center to</br>bottom-right.'</br>ㅤ);</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./5.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100, WEBGL);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A black line connecting two spheres. The scene</br>spins slowly.');</br>}</p>
+                <p></p>
+                <p class="Code">function draw() {</br>ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Rotate around the y-axis.</br>ㅤㅤrotateY(frameCount * 0.01);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Draw a line.</br>ㅤㅤline(0, 0, 0, 30, 20, -10);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Draw the center sphere.</br>ㅤㅤsphere(10);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Translate to the second point.</br>ㅤㅤtranslate(30, 20, -10);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Draw the bottom-right sphere.</br>ㅤㅤsphere(10);</br>}</p>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="syntax">
+            <h2 class="title">Syntax</h2>
+            <div class="CODE">
+                <p class="Code">line(x1, y1, x2, y2)</p>
+            </div>
+            <p></p>
+            <div class="CODE">
+                <p class="Code">line(x1, y1, z1, x2, y2, z2)</p>
+            </div>
+        </div>
+        <div class="parameters">
+            <h2 class="title">Parameters</h2>
+            <div class="cOde">
+                <p class="Code">x1ㅤㅤㅤㅤㅤㅤNumber: the x-coordinate of the first point.</br>y1ㅤㅤㅤㅤㅤㅤNumber: the y-coordinate of the first point.</br>x2ㅤㅤㅤㅤㅤㅤNumber: the x-coordinate of the second point.</br>y2ㅤㅤㅤㅤㅤㅤNumber: the y-coordinate of the second point.</br>z1ㅤㅤㅤㅤㅤㅤNumber: the z-coordinate of the first point.</br>z2ㅤㅤㅤㅤㅤㅤNumber: the z-coordinate of the second point.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
