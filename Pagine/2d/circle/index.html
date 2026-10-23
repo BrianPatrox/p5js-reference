@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arc</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../../../mats/ico.png">
+</head>
+<body>
+    <h1 class="title">arc()</h1>
+    <div class="description">
+        <p class="Descrition">Draw an arc.</p>
+        <p class="Descrition">An arc is a section of an ellipse defined by the <code class="p-with-background Descrition">x</code>, <code class="p-with-background Descrition">y</code>, <code class="p-with-background Descrition">w</code> and <code class="p-with-background Descrition">h</code> parameters. <code class="p-with-background Descrition">x</code> and <code class="p-with-background Descrition">y</code></br>set the location of the arc's center. <code class="p-with-background Descrition">w</code> and <code class="p-with-background">h</code> set the arc's width and height. See</br>ellipse() and ellipseMode() for more details.</p>
+        <p class="Descrition">The fifth and sixth parameters, <code class="p-with-background">start</code>, and <code class="p-with-background">stop</code>, set the angles between which to</br>draw the arc. Arcs are always drawn clockwise from <code class="p-with-background">start</code> to <code class="p-with-background">stop</code>. Angles are</br>always given in radians.</p>
+        <p class="Descrition">The seventh parameter, <code class="p-with-background">mode</code>, is optional. It determines the arc's fill style. The fill</br>modes are a semi-circle (<code class="p-with-background">OPEN</code>), a closed semi-circle (<code class="p-with-background">CHORD</code>), or a closed pie</br>segment (<code class="p-with-background">PIE</code>).</p>
+        <p class="Descrition">The eighth parameter, <code class="p-with-background">details</code>, is also optional. It determines how many vertices are</br>used to draw the arc in WebGL mode. The default value is 25.</p>
+    </div>
+    <div class="examples">
+        <h2 class="title">Examples</h2>
+        <div class="how">
+            <img class="result" src="./1.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤarc(50, 50, 80, 80, 0, PI + HALF_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle on a gray canvas. The top-right</br>quarter of the circle is missing.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./2.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤarc(50, 50, 80, 40, 0, PI + HALF_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white ellipse on a gray canvas. The top-right </br>quarter of the ellipse is missing.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./3.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Bottom-right.</br>ㅤㅤarc(50, 55, 50, 50, 0, HALF_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤnoFill();</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Bottom-left.</br>ㅤㅤarc(50, 55, 60, 60, HALF_PI, PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Top-left.</br>ㅤㅤarc(50, 55, 70, 70, PI, PI + QUARTER_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Top-right.</br>ㅤㅤarc(50, 55, 80, 80, PI + QUARTER_PI, TWO_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe(</br>ㅤㅤ'A shattered outline of an circle with a quarter of a</br>white circle at the bottom-right.'</br>ㅤ);</br>}</p>
+            </div>
+        </div> 
+        <div class="how">
+            <img class="result" src="./4.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Default fill mode.</br>ㅤㅤarc(50, 50, 80, 80, 0, PI + QUARTER_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle with the top-right third missing.</br>The bottom is outlined in black.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./5.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Default fill mode.</br>ㅤㅤarc(50, 50, 80, 80, 0, PI + QUARTER_PI);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle with the top-right third missing.</br>The bottom is outlined in black.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./6.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// CHORD fill mode.</br>ㅤㅤarc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle with a black outline missing a</br>section from the top-right.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./7.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// PIE fill mode.</br>ㅤㅤarc(50, 50, 80, 80, 0, PI + QUARTER_PI, PIE)</p>
+                <p></p>
+                <p class="Code">ㅤㅤarc(50, 50, 80, 80, 0, PI + QUARTER_PI, PIE) third is</br>missing.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./8.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100, WEBGL);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// PIE fill mode.</br>ㅤㅤarc(0, 0, 80, 80, 0, PI + QUARTER_PI, PIE);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle with a black outline. The top-right</br>third is missing.');</br>}</p>
+            </div>
+        </div>  
+        <div class="how">
+            <img class="result" src="./9.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100, WEBGL);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// PIE fill mode with 5 vertices.</br>ㅤㅤarc(0, 0, 80, 80, 0, PI + QUARTER_PI, PIE, 5);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A white circle with a black outline. The top-right</br>third is missing.');</br>}</p>
+            </div>
+        </div>
+        <div class="how">
+            <img class="result" src="./10.png" alt="image not found">
+            <div class="code">
+                <p class="Code">function setup() {</br>ㅤㅤcreateCanvas(100, 100);</p>
+                <p></p>
+                <p class="Code">ㅤㅤbackground(200);</p>
+                <p></p>
+                <p class="Code">ㅤㅤdescribe('A yellow circle on a black background. The circle</br>opens and closes its mouth.');</br>}</p>
+                <p></p>
+                <p class="Code">function draw() {</br>ㅤㅤbackground(0);</p>
+                <p></p>
+                <p class="Code">function draw() {</br>ㅤㅤbackground(0);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Style the arc.</br>ㅤㅤnoStroke();</br>ㅤㅤfill(255, 255, 0);</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Update start and stop angles.</br>ㅤㅤlet biteSize = PI / 16;</br>ㅤㅤlet startAngle = biteSize * sin(frameCount * 0.1) + biteSize;</br>ㅤㅤlet endAngle = TWO_PI - startAngle;</p>
+                <p></p>
+                <p class="Code">ㅤㅤ// Draw the arc</br>ㅤㅤarc(50, 50, 80, 80, startAngle, endAngle, PIE);</br>}</p>
+            </div>
+        </div>
+        </div>
+        <div class="syntax">
+            <h2 class="title">Syntax</h2>
+            <div class="CODE">
+                <p class="Code">ㅤarc(x, y, w, h, start, stop, [mode], [detail])</p>
+            </div>
+        </div>
+        <div class="parameters">
+            <h2 class="title">Parameters</h2>
+            <div class="cOde">
+                <p class="Code">xㅤㅤㅤㅤㅤㅤNumber: x-coordinate of the arc's ellipse.</br>yㅤㅤㅤㅤㅤㅤNumber: y-coordinate of the arc's ellipse.</br>wㅤㅤㅤㅤㅤㅤNumber: width of the arc's ellipse by default.</br>hㅤㅤㅤㅤㅤㅤNumber: height of the arc's ellipse by default.</br>startㅤㅤㅤㅤNumber: angle to start the arc, specified in radians.</br>stopㅤㅤㅤㅤNumber: angle to stop the arc, specified in radians.</br>modeㅤㅤㅤCHORD|PIE|OPEN: optional parameter to determine the way of drawing the arc. either CHORD,</br>ㅤㅤㅤㅤㅤㅤPIE, or OPEN.</br>detailㅤㅤㅤInteger: optional parameter for WebGL mode only. This is to specify the number of vertices</br>ㅤㅤㅤㅤㅤthat makes up the perimeter of the arc. Default value is 25. Won't draw a stroke for a detail of</br>ㅤㅤㅤㅤㅤmore than 50.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
