@@ -61,7 +61,8 @@
 .raw {
     display: flex;
     flex-direction: row;
-    column-gap: 150px;
+    column-gap: 300px;
+    margin-top: 50px;
 }
 
 .all {
